@@ -1,0 +1,105 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Zenlocker Dashboard | Welcome</title>
+    <style>
+        .column:last-child,
+        .columns:last-child {
+            float: left!important;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px!important;
+        }
+        table {
+            border: none;
+        }
+        .labelText label {
+            font-weight: bold;
+            font-size: 16px; !important;
+        }
+        .active {
+            background-color:#ececec;
+        }
+    </style>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+</head>
+
+<body class="hidden hide">
+    <img id="cimg" style="display:none;"/>
+    <!-- Start Top Bar -->
+    <div class="top-bar" style="background-color:#fff;border-top:2px solid #03a678; border-bottom:1px solid #e6e6e6">
+        <div class="top-bar-left">
+            <ul class="menu" style="background-color:transparent;">
+                <li class="menu-text" style="font-size:18px;">ZenLocker</li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Top Bar -->
+    <br/>
+    <div class="row" style="margin-top:10px;height:100%;" id="workflow_container">
+        <div class="large-offset-2 large-9 medium-3 columns">
+            <div class="row">
+                <div class="large-5 columns">
+                    <h4>Create a new account</h4>
+                </div>
+            </div>
+            <form id="signup" class="labelText">
+                <div class="row">
+                    <div class="large-9 columns">
+                        <label>Email Address: <input id="email" type="text" required="true" placeholder="Enter your email"/></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-9 columns">
+                        <label>Display Name: <input type="text" id="display_name" required="true" placeholder="Enter a display name"/></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-9 columns">
+                        <label>Password : <input type="password" id="password" required="true" placeholder="Enter the password"/></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-1 columns">
+                        <input class="button medium" type="submit" value="Signup"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h3 id="error"></h3>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row hide" id="postSignup">
+        <div class="large-offset-1 large-9 medium-3 columns">
+            <h4>Login Details</h4><super>Please keep the details safe</super>
+            <div class="callout primary" id="loginDetails">
+            </div>
+            <br/>
+            <a href="/login.html">Back to login</a>
+        </div>
+
+    </div>
+
+    <script src="http://npmcdn.com/ipfs-api/dist/index.js"></script>
+    <script src="dist/signup.bundle.js"></script>
+
+    <script src="https://cdn.rawgit.com/creatorrr/web-streams-polyfill/master/dist/polyfill.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+
+    </script>
+</body>
+
+</html>

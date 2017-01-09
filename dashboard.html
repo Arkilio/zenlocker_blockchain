@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Zenlocker Dashboard | Welcome</title>
+    <style>
+        .column:last-child,
+        .columns:last-child {
+            float: left!important;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px!important;
+        }
+        table {
+            border: none;
+        }
+        label {
+            font-weight: 600;
+        }
+        .active {
+            background-color:#ececec;
+        }
+        form label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="viewer.css">
+</head>
+
+<body>
+    <!-- Start Top Bar -->
+    <div class="top-bar" style="background-color:#fff;border-top:2px solid #03a678; border-bottom:1px solid #e6e6e6">
+        <div class="top-bar-left">
+            <ul class="menu" style="background-color:transparent;">
+                <li class="menu-text" style="font-size:18px;">ZenLocker</li>
+            </ul>
+        </div>
+
+        <div class="top-bar-right">
+            <ul class="menu" style="background-color:transparent;">
+                <li class="menu-text" id="username" style="font-size:18px;"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Top Bar -->
+    <div id = "unlock" class="row" style="margin-top:10%;">
+        <div class="large-offset-4 large-4 columns">
+            <form id="login">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <label>
+                            Enter Password to unlock
+                            <input id= "password" type="password"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-2 columns">
+                        <label>
+                            <input type="submit" value="Unlock" class="button"/>
+                        </label>
+                    </div>
+                    <div class="large-offset-1 large-2 columns right">
+                        <label>
+                            <button class="button" onclick="logout(this)">Logout</button>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h3 id="error"></h3>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div id = "dashboard" class="row"  style="margin-left:0px;height:100%;display:none;">
+        <div class="large-3 medium-3 columns" style="padding:0px;height:100%;background-color:#FAFAFA;font-weight:bold;">
+            <ul class="menu vertical">
+                <li class="active"><a onclick="myDocumentsMenuHandler(this)">My Documents</a></li>
+                <li><a onclick="recievedDocumentsMenuHandler(this)">Recieved Documents</a></li>
+                <li><a onclick="requestedDocumentsHandler(this)">My Requests</a></li>
+                <li><a onclick="issueDocumentMenuHandler(this)">Issue a Document</a></li>
+                <li><a onclick="logout(this)">Logout</a></li>
+            </ul>
+        </div>
+        <div class="large-9 medium-3 columns" id = "workflow_container">
+        </div>
+    </div>
+
+    <script src="http://npmcdn.com/ipfs-api/dist/index.js"></script>
+
+    <script src="https://cdn.rawgit.com/creatorrr/web-streams-polyfill/master/dist/polyfill.min.js"></script>
+    <script src="dist/dashboard.bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+
+    </script>
+</body>
+
+</html>
