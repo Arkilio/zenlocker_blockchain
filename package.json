@@ -6,7 +6,8 @@
   "scripts": {
     "dashboard": "watchify src/dashboard.js -o dist/dashboard.bundle.js",
     "login": "watchify src/login.js -o dist/login.bundle.js",
-    "signup": "watchify src/signup.js -o dist/signup.bundle.js"
+    "signup": "watchify src/signup.js -o dist/signup.bundle.js",
+    "truffle": "truffle migrate --all"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,6 @@
   },
   "homepage": "https://github.com/subramanianv/CertificateVerification#readme",
   "devDependencies": {
-    "browserify": "^13.1.0",
     "watchify": "^3.7.0"
   },
   "dependencies": {
@@ -27,12 +27,13 @@
     "base64-arraybuffer": "^0.1.5",
     "bluebird": "3.4.6",
     "body-parser": "1.15.2",
+    "browserify": "^13.3.0",
     "bs58": "^3.0.0",
     "eth-lightwallet": "^2.5.2",
     "eth-query": "git://github.com/ethereumjs/eth-query.git",
     "ethereumjs-testrpc": "^3.0.2",
-    "ethereumjs-tx": "^1.1.2",
-    "ethereumjs-util": "^4.5.0",
+    "ethereumjs-tx": "1.1.2",
+    "ethereumjs-util": "4.5.0",
     "express": "4.14.0",
     "hooked-web3-provider": "^1.0.0",
     "ipfs": "0.17.0",
@@ -42,6 +43,7 @@
     "moment": "^2.17.1",
     "mustache": "^2.3.0",
     "streamsaver": "^1.0.0",
+    "truffle": "2.*.*",
     "underscore": "^1.8.3",
     "uport-persona": "git://github.com/subramanianv/uport-persona.git",
     "viewerjs": "^0.5.0",

@@ -1,4 +1,3 @@
-var Tx = require('ethereumjs-tx');
 var moment = require('moment');
 var bs58 = require('bs58');
 var lightwallet = require('eth-lightwallet');
